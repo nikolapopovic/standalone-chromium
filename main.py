@@ -10,3 +10,5 @@ options.add_argument("--headless")
 options.add_argument("--disable-dev-shm-usage")
 
 driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+driver.maximize_window()
+driver.get("http://google.com/")
